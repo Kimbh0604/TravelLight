@@ -65,6 +65,8 @@ const resources = {
       selfStorage2: 'Self Storage',
       luggageDelivery2: 'Luggage Delivery',
       priceGuide: 'Price Guide',
+      searchtap : 'search address or places',
+      findplace : 'find nearest place',
       howToUse: 'How to Use',
       aboutCompany: 'About Company',
       aboutUs: 'About Us',
@@ -170,6 +172,63 @@ const resources = {
       setWithinOperatingHours: 'Please set within operating hours',
       processing: "Processing",
       processingPayment: "Processing Payment",
+
+      //주소, 휴무일
+      closeday: "Day off",
+      currentluggage: "Current luggage",
+      available: "available to",
+      holds: "holds",
+      selectcloseday: "The selected day is day off",
+      cafe: "Cafe",
+      conveniencestore: "Convenience store",
+      hotel: "Hotel",
+      restaurant: "Restaurant",
+      nobusinesshours: "No business hours infomation",
+      aviliableluggage: "Current aviliable to hold luggage",
+      paymentinfo: "Payment Info",
+      placename: "Place name",
+      startdate: "Start date",
+      luggagetype: "Luggage type",
+      totalprice: "Total Price",
+
+      // Map.tsx에서 사용되는 추가 번역 키들
+      noSearchResults: 'No search results found.',
+      customer: 'Customer',
+      paymentFailed: 'Payment failed',
+      paymentVerificationFailed: 'Payment verification failed',
+      paymentCompletionFailed: 'Payment completion processing failed',
+      paymentProcessingError: 'An error occurred during payment processing',
+      paymentInfoIncorrect: 'Payment information is incorrect.',
+      capacityExceeded: 'The selected luggage count exceeds the store\'s available capacity.',
+      operatingHoursInfo: 'No business hours information',
+      storageUnavailable: 'Storage unavailable',
+      storageAvailable: 'available',
+      storageCapacityAvailable: 'storage available',
+      storageCapacityUnavailable: 'storage unavailable',
+      checkingCapacity: 'Checking available capacity...',
+      cannotLoadInfo: 'Cannot load information.',
+      luggageStorageService: 'Luggage Storage Service',
+      safePortonePayment: 'Safe PortOne Payment',
+      paymentMethodsSupported: 'Card, bank transfer, easy payment, etc.<br/>Various payment methods are supported',
+      paymentInfo: 'Payment Info',
+      storagePlace: 'Storage Place',
+      storagePeriod: 'Storage Period',
+      storageLuggage: 'Storage Luggage',
+      totalPaymentAmount: 'Total Payment Amount',
+      paymentInProgress: 'Payment in progress...',
+      paymentButton: 'Pay',
+      selectedDateClosed: 'The selected date is a day off',
+      endDateClosed: 'The selected end date is a day off',
+
+      // Additional translation keys for Map.tsx
+      paymentMethodsDescription: 'Card, bank transfer, easy payment, etc.<br/>Various payment methods are supported',
+      
+      // Missing translation keys from Map.tsx
+      searchResultTitle: 'Search Results ({count} found)',
+      noOpeningHours: 'No opening hours information',
+      paymentInfoSummary: 'Payment Information',
+      paymentMethodsInfo: 'Card, bank transfer, easy payment, etc.<br/>Various payment methods are supported',
+      paymentAmountButton: '{{amount}} Pay',
       
       // Partner page translations
       partnerWelcome: 'TravelLight Partner Program',
@@ -197,7 +256,23 @@ const resources = {
       startDescription: 'Create a partner account after approval to access the store management system and start the service.',
       joinNow: 'Join as a Partner Now',
       joinNowDescription: 'Contact us if you need more information. The TravelLight team will guide you in detail.',
-      applyNow: 'Apply Now'
+      applyNow: 'Apply Now',
+      selectedDateClosedParentheses: ' (The selected date is a day off)',
+      selectedDateClosedButton: 'The selected date is a day off',
+
+      // Business type translations
+      convenientStore: 'Convenience Store',
+      bank: 'Bank',
+      accommodation: 'Accommodation',
+      
+      // Missing translation keys from Map.tsx
+      searchResultTitle: '검색 결과 ({count}개 발견)',
+      noOpeningHours: '영업시간 정보 없음',
+      paymentInfoSummary: '결제 정보',
+      paymentMethodsInfo: '카드, 계좌이체, 간편결제 등<br/>다양한 결제 수단을 지원합니다',
+      paymentAmountButton: '{{amount}}원 결제하기',
+      selectedDateClosedParentheses: ' (선택한 날짜는 휴무일입니다)',
+      selectedDateClosedButton: '선택한 날짜는 휴무일입니다'
     }
   },
   ko: {
@@ -367,6 +442,53 @@ const resources = {
       setWithinOperatingHours: '운영 시간 내로 설정해주세요',
       processing: "처리 중",
       processingPayment: "결제를 처리하고 있습니다",
+
+      //주소, 휴무일
+      closeday: "휴무일",
+      currentluggage: "Current luggage",
+      avilialbeto: "aviliable to",
+      holds: "holds",
+      selectcloseday: "선택한 날짜는 매장 휴무일입니다",
+      cafe: "카페",
+      conveniencestore: "편의점",
+      hotel: "호텔",
+      restaurant: "식당",
+      nobusinesshours: "영업시간 정보가 없습니다",
+      aviliableluggage: "현재 보관 가능한 짐",
+      paymentinfo: "결제 정보",
+      placename: "보관 장소",
+      startdate: "보관 기간",
+      luggagetype: "보관 짐",
+      totalprice: "총 결제금액",
+
+      // Map.tsx에서 사용되는 추가 번역 키들
+      noSearchResults: '검색 결과가 없습니다.',
+      customer: '고객',
+      paymentFailed: '결제 실패',
+      paymentVerificationFailed: '결제 검증에 실패했습니다',
+      paymentCompletionFailed: '결제 완료 처리 실패',
+      paymentProcessingError: '결제 처리 중 오류가 발생했습니다',
+      paymentInfoIncorrect: '결제 정보가 올바르지 않습니다.',
+      capacityExceeded: '선택한 짐의 개수가 매장의 보관 가능한 개수를 초과했습니다.',
+      operatingHoursInfo: '영업시간 정보 없음',
+      storageUnavailable: '보관 불가',
+      storageAvailable: '개 보관 가능',
+      storageCapacityAvailable: '개 보관 가능',
+      storageCapacityUnavailable: '보관 불가',
+      checkingCapacity: '보관 가능한 개수를 확인 중...',
+      cannotLoadInfo: '정보를 불러올 수 없습니다.',
+      luggageStorageService: '짐보관 서비스',
+      safePortonePayment: '안전한 포트원 결제',
+      paymentMethodsSupported: '카드, 계좌이체, 간편결제 등<br/>다양한 결제 수단을 지원합니다',
+      paymentInfo: '결제 정보',
+      storagePlace: '보관 장소',
+      storagePeriod: '보관 기간',
+      storageLuggage: '보관 짐',
+      totalPaymentAmount: '총 결제금액',
+      paymentInProgress: '결제 진행 중...',
+      paymentButton: '결제하기',
+      selectedDateClosed: '선택한 날짜는 휴무일입니다',
+      endDateClosed: '선택한 종료일은 매장 휴무일입니다',
       
       // Partner page translations
       partnerWelcome: '트래블라이트 파트너 프로그램',
@@ -394,7 +516,23 @@ const resources = {
       startDescription: '승인 후 파트너 계정을 생성하여 매장 관리 시스템에 접속하고 서비스를 시작합니다.',
       joinNow: '지금 파트너 가입하기',
       joinNowDescription: '더 많은 정보가 필요하시면 문의하세요. 트래블라이트 팀이 상세히 안내해 드리겠습니다.',
-      applyNow: '지금 신청하기'
+      applyNow: '지금 신청하기',
+
+      // Missing translation keys from Map.tsx
+      searchResultTitle: '검색 결과 ({count}개 발견)',
+      noOpeningHours: '영업시간 정보 없음',
+      paymentInfoSummary: '결제 정보',
+      paymentMethodsInfo: '카드, 계좌이체, 간편결제 등<br/>다양한 결제 수단을 지원합니다',
+      paymentAmountButton: '{{amount}}원 결제하기',
+      selectedDateClosedParentheses: ' (선택한 날짜는 휴무일입니다)',
+      selectedDateClosedButton: '선택한 날짜는 휴무일입니다',
+
+      // Business type translations
+      convenientStore: '편의점',
+      cafe: '카페',
+      bank: '은행',
+      restaurant: '식당',
+      accommodation: '숙박'
     }
   }
 };
